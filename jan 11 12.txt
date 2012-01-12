@@ -1,0 +1,81 @@
+max = largest value in items[0...size-1]
+
+k=0
+max=itmes[0]
+{inv}
+while(k != size)
+    inv max = max of items[0...k-1]
+
+
+//return largest value in list if not empty other wise return Integer.MINALUE(check integer javadoc)...wedep
+
+int max() {
+    if(size == 0)
+        return INTEGER.MIN_VALUE
+}
+
+
+NOTATION
+{assertion}
+{pre: assertion}
+{post: ----}
+{inv: ---}
+
+
+HISTORY
+problem: prove that
+    t=x; x=y; y=t;
+actually swaps x,y
+convention: use subscripts or case distinctions
+   {pre: x=X ^ y = Y}
+       t=x; x=y; y=t;
+   {post: x=Y ^ y = X}
+
+problem given a[0...n-1]
+    reverse elements
+
+{pre: a[0....n-1]}
+{post: reversed array}
+                                  L                       R
+I{inv: a[    a[n-1],a[n-2]        |    original order       |       a[1],a[0]     ] }
+
+
+L=0
+R = n-1  
+while(  L < R      ){
+    {inv : I}
+    swap(a[L],a[R])
+    L=L+1
+    R=R-1
+    {I}
+}
+
+Binary Search for value X
+
+pre: a[0] <= a[i] <= ...a[n-1]
+post: a[0    <= x    |    > X n]
+               L        R
+inv: a[0 <=x    | ?    | > x    n]
+    a[o...L] <= X
+    a[R...n-1]>x
+    a[L +1 ...R - 1]unknown
+
+L = -1
+R = n
+while(L+1 != R){
+    mid = (L+R)/2
+    if(a[mid] <= x)
+        L = mid
+    else //
+        R = mid
+
+done:
+    found if L >= 0 && a[L] = x
+
+
+
+
+    
+
+   
+
